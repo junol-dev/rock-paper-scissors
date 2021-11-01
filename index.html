@@ -23,9 +23,9 @@
       function computerPlay() {
         const items = ["rock", "paper", "scissors"];
 
-        const itemsIndex = getRandomIndex(items);
+        const randomIndex = getRandomIndex(items);
 
-        const computerChoice = items[itemsIndex];
+        const computerChoice = items[randomIndex];
 
         return computerChoice;
       }
@@ -76,17 +76,21 @@
           console.log(playRound(player, computer));
         }
 
+        showWinner();
+      }
+
+      function showWinner() {
         if (playerScore == computerScore) {
           console.log(
-            `Player Score: ${playerScore}. Computer Score: ${computerScore}. Tie!`
+            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nTie!`
           );
         } else if (playerScore > computerScore) {
           console.log(
-            `Player Score: ${playerScore}. Computer Score: ${computerScore}. Player Wins!`
+            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nPlayer Wins!`
           );
         } else if (playerScore < computerScore) {
           console.log(
-            `Player Score: ${playerScore}. Computer Score: ${computerScore}. Computer Wins!`
+            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nComputer Wins!`
           );
         }
       }
