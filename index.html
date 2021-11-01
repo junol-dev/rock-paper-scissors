@@ -36,33 +36,33 @@
         console.log(`Computer: ${computer}`);
 
         if (player === computer) {
-          return "Tie.";
+          return "Tie.\n\n";
         } else if (player === "rock") {
           if (computer === "scissors") {
             playerScore++;
-            return "You Win! Computer Lose. Rock Beats Scissors";
+            return "You Win! Computer Lose. Rock Beats Scissors\n\n";
           } else if (computer === "paper") {
             computerScore++;
-            return "Computer Win! You Lose. Paper Beats Rock";
+            return "Computer Win! You Lose. Paper Beats Rock\n\n";
           }
         } else if (player === "paper") {
           if (computer === "rock") {
             playerScore++;
-            return "You Win! Computer Lose. Paper Beats Rock";
+            return "You Win! Computer Lose. Paper Beats Rock\n\n";
           } else if (computer === "scissors") {
             computerScore++;
-            return "Computer Win! You Lose. Scissors Beats Paper";
+            return "Computer Win! You Lose. Scissors Beats Paper\n\n";
           }
         } else if (player === "scissors") {
           if (computer === "paper") {
             playerScore++;
-            return "You Win! Computer Lose. Scissors Beats Paper";
+            return "You Win! Computer Lose. Scissors Beats Paper\n\n";
           } else if (computer === "rock") {
             computerScore++;
-            return "Computer Win! You Lose. Rock Beats Scissors.";
+            return "Computer Win! You Lose. Rock Beats Scissors.\n\n";
           }
         } else {
-          return "Please Select An Option.";
+          return "Please Select An Option.\n\n";
         }
       }
 
