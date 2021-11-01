@@ -8,6 +8,9 @@
   </head>
   <body>
     <script>
+      let playerScore = 0;
+      let computerScore = 0;
+
       function computerPlay() {
         const items = ["rock", "paper", "scissors"];
 
@@ -17,11 +20,6 @@
 
         return computerChoice;
       }
-
-      let playerScore = 0;
-      let computerScore = 0;
-
-      game();
 
       function playRound(player, computer) {
         player = player.toLowerCase();
