@@ -4,3 +4,5 @@
 
 - This is the first JavaScript project I built in The Odin Project foundation.
 - This game allows users to interact via buttons while selecting (Rock, Paper, or Scissors)
+
+## Icons built by FontAwesome
