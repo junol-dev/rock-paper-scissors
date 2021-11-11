@@ -4,100 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-      body {
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-      }
-    </style>
+
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Project: Rock Paper Scissors</title>
   </head>
   <body>
     <h1>Rock Paper Scissors Game</h1>
-    <p>To play: open up console and type "game()"</p>
-    <script>
-      let playerScore = 0;
-      let computerScore = 0;
 
-      function computerPlay() {
-        const items = ["rock", "paper", "scissors"];
+    <div class="items">
+      <button id="rock"><i class="fas fa-hand-rock"></i></button>
+      <button id="paper"><i class="fas fa-hand-paper"></i></button>
+      <button id="scissors"><i class="fas fa-hand-scissors"></i></button>
+    </div>
 
-        const randomIndex = getRandomIndex(items);
+    <div class="results"></div>
+    <div class="scores">
+      <div class="playerScore"></div>
+      <div class="computerScore"></div>
+    </div>
+    <div class="announceWinner"></div>
 
-        const computerChoice = items[randomIndex];
-
-        return computerChoice;
-      }
-
-      function playRound(player, computer) {
-        player = player.toLowerCase();
-        console.log(`Player: ${player}`);
-        console.log(`Computer: ${computer}`);
-
-        if (player === computer) {
-          return "Tie.\n\n";
-        } else if (player === "rock") {
-          if (computer === "scissors") {
-            playerScore++;
-            return "You Win! Computer Lose. Rock Beats Scissors\n\n";
-          } else if (computer === "paper") {
-            computerScore++;
-            return "Computer Win! You Lose. Paper Beats Rock\n\n";
-          }
-        } else if (player === "paper") {
-          if (computer === "rock") {
-            playerScore++;
-            return "You Win! Computer Lose. Paper Beats Rock\n\n";
-          } else if (computer === "scissors") {
-            computerScore++;
-            return "Computer Win! You Lose. Scissors Beats Paper\n\n";
-          }
-        } else if (player === "scissors") {
-          if (computer === "paper") {
-            playerScore++;
-            return "You Win! Computer Lose. Scissors Beats Paper\n\n";
-          } else if (computer === "rock") {
-            computerScore++;
-            return "Computer Win! You Lose. Rock Beats Scissors.\n\n";
-          }
-        } else {
-          return "Please Select An Option.\n\n";
-        }
-      }
-
-      function game() {
-        for (let i = 1; i <= 5; i++) {
-          const player = prompt(
-            "What's Your Selection? (Rock, Paper, Scissors)"
-          );
-          const computer = computerPlay();
-          console.log(`// Round ${i}:`);
-          console.log(playRound(player, computer));
-        }
-
-        showWinner();
-      }
-
-      function showWinner() {
-        if (playerScore == computerScore) {
-          console.log(
-            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nTie!`
-          );
-        } else if (playerScore > computerScore) {
-          console.log(
-            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nPlayer Wins!`
-          );
-        } else if (playerScore < computerScore) {
-          console.log(
-            `Player Score: ${playerScore}\nComputer Score: ${computerScore}\n\nComputer Wins!`
-          );
-        }
-      }
-
-      function getRandomIndex(array) {
-        return Math.floor(Math.random() * array.length);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
